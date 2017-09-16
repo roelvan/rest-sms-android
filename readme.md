@@ -5,5 +5,5 @@
 PHONE_ADDRESS=http://192.168.0.221:8080
 ```
 ![Your phones local address.](https://i.imgur.com/DHuwa8o.jpg)  
-- Add your app logic to `index.js`.  
+- Add your app's logic to `index.js`.  
 - Run `npm start`.
