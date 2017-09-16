@@ -9,4 +9,7 @@ sendSMS('0496059773', 'Hello World!')
     console.log('Message sent!')
     process.exit()
   })
-  .catch(() => console.log('Something went wrong!'))
+  .catch(() => {
+    console.log('Something went wrong!')
+    process.exit()
+  })
