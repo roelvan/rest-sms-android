@@ -11,7 +11,11 @@ const promiseThrottle = new PromiseThrottle({
 results.forEach((participant, index) => {
   // console.log('Rank:', index + 1, 'Score:', participant.score, 'Phone:', participant.phone)
   const rank = index + 1
-  const message = `Morgenavond om 17u (ipv 18u) de voorlaatste speelavond van De Slimste Mens van Beselare. PS: Je staat op plaats ${rank} in de pronostiekwedstrijd voor het winnen van de ballonvaart, zie uitslag: https://goo.gl/twbDfN. Tot dan!`
+  let message = `Vanavond om 19u00 de grote finale van De Slimste Mens van Beselare met finalisten Lien, Heike, Pieter, Lies, Jurgen, Dries en Serge!`
+
+  if (rank <= 20) {
+    message += ` PS: Je staat op plaats ${rank} in de pronostiekwedstrijd voor het winnen van de ballonvaart. Tot dan!`
+  }
   
   promiseThrottle.add(() => {
     return sendSMS(participant.phone, message)
